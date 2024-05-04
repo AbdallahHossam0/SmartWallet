@@ -1,5 +1,10 @@
 #include "server.h"
 
+Server& Server::getServer() {
+    static Server instance;
+    return instance;
+}
+
 void Server::handleClient(int clientSocket) {
     constexpr unsigned char maxBufferSize = 255;
     bool flag = true;
@@ -24,6 +29,7 @@ void Server::handleClient(int clientSocket) {
 }
 
 bool Server::init(int port) {
+
     m_serverSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (m_serverSocket < 0) {
         std::cout << "Error creating socket" << std::endl;
