@@ -1,24 +1,30 @@
 #pragma once
 
-#include <iostream>
-#include <sys/socket.h>
-#include <netinet/in.h>
 #include <arpa/inet.h>
-#include <unistd.h>
+#include <iostream>
+#include <netinet/in.h>
 #include <string>
+#include <sys/socket.h>
+#include <unistd.h>
 
-
-class Client{
-private:
+class Client {
+  private:
     int m_clientSocket;
     sockaddr_in m_clientAddr;
 
-public:
-    Client() : m_clientSocket{-1} {} 
+    Client() : m_clientSocket{-1} {}
 
-    ~Client() {close(m_clientSocket);}
+    Client(const Client &) = delete;
+    Client &operator=(const Client &) = delete;
+
+    Client(const Client &&) = delete;
+    Client &operator=(const Client &&) = delete;
+
+  public:
+    static Client &getClient();
 
     bool init(unsigned short portNumber);
     void start(void);
 
+    ~Client() { close(m_clientSocket); }
 };
