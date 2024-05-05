@@ -31,11 +31,9 @@ public:
     QVBoxLayout *verticalLayout_2;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
-    QLabel *label_2;
-    QLineEdit *lineEdit;
+    QLineEdit *UsenameBox;
     QHBoxLayout *horizontalLayout_2;
-    QLabel *label_3;
-    QLineEdit *lineEdit_2;
+    QLineEdit *PasswordBox;
     QPushButton *LoginButton;
     QLabel *label;
     QPushButton *BackToMainWindow;
@@ -47,7 +45,7 @@ public:
         SignIn->resize(380, 320);
         ErrorLabel = new QLabel(SignIn);
         ErrorLabel->setObjectName("ErrorLabel");
-        ErrorLabel->setGeometry(QRect(36, 250, 321, 20));
+        ErrorLabel->setGeometry(QRect(36, 229, 321, 41));
         QFont font;
         font.setBold(true);
         font.setItalic(false);
@@ -58,7 +56,7 @@ public:
         ErrorLabel->setAlignment(Qt::AlignCenter);
         groupBox = new QGroupBox(SignIn);
         groupBox->setObjectName("groupBox");
-        groupBox->setGeometry(QRect(30, 100, 331, 141));
+        groupBox->setGeometry(QRect(30, 80, 331, 141));
         layoutWidget = new QWidget(groupBox);
         layoutWidget->setObjectName("layoutWidget");
         layoutWidget->setGeometry(QRect(10, 30, 311, 95));
@@ -69,30 +67,23 @@ public:
         verticalLayout->setObjectName("verticalLayout");
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName("horizontalLayout");
-        label_2 = new QLabel(layoutWidget);
-        label_2->setObjectName("label_2");
+        UsenameBox = new QLineEdit(layoutWidget);
+        UsenameBox->setObjectName("UsenameBox");
+        UsenameBox->setAlignment(Qt::AlignCenter);
 
-        horizontalLayout->addWidget(label_2);
-
-        lineEdit = new QLineEdit(layoutWidget);
-        lineEdit->setObjectName("lineEdit");
-
-        horizontalLayout->addWidget(lineEdit);
+        horizontalLayout->addWidget(UsenameBox);
 
 
         verticalLayout->addLayout(horizontalLayout);
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
-        label_3 = new QLabel(layoutWidget);
-        label_3->setObjectName("label_3");
+        PasswordBox = new QLineEdit(layoutWidget);
+        PasswordBox->setObjectName("PasswordBox");
+        PasswordBox->setEchoMode(QLineEdit::Password);
+        PasswordBox->setAlignment(Qt::AlignCenter);
 
-        horizontalLayout_2->addWidget(label_3);
-
-        lineEdit_2 = new QLineEdit(layoutWidget);
-        lineEdit_2->setObjectName("lineEdit_2");
-
-        horizontalLayout_2->addWidget(lineEdit_2);
+        horizontalLayout_2->addWidget(PasswordBox);
 
 
         verticalLayout->addLayout(horizontalLayout_2);
@@ -115,7 +106,7 @@ public:
         label->setWordWrap(true);
         BackToMainWindow = new QPushButton(SignIn);
         BackToMainWindow->setObjectName("BackToMainWindow");
-        BackToMainWindow->setGeometry(QRect(80, 280, 200, 31));
+        BackToMainWindow->setGeometry(QRect(90, 280, 200, 31));
 
         retranslateUi(SignIn);
 
@@ -127,8 +118,8 @@ public:
         SignIn->setWindowTitle(QCoreApplication::translate("SignIn", "Dialog", nullptr));
         ErrorLabel->setText(QString());
         groupBox->setTitle(QCoreApplication::translate("SignIn", "Login", nullptr));
-        label_2->setText(QCoreApplication::translate("SignIn", "User Name", nullptr));
-        label_3->setText(QCoreApplication::translate("SignIn", "Password", nullptr));
+        UsenameBox->setPlaceholderText(QCoreApplication::translate("SignIn", "Enter your Username", nullptr));
+        PasswordBox->setPlaceholderText(QCoreApplication::translate("SignIn", "Enter Your Password", nullptr));
         LoginButton->setText(QCoreApplication::translate("SignIn", "Login", nullptr));
         label->setText(QCoreApplication::translate("SignIn", "Welcome to Smart Wallet", nullptr));
         BackToMainWindow->setText(QCoreApplication::translate("SignIn", "Back To Main Window", nullptr));
