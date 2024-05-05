@@ -44,3 +44,8 @@ bool Validator::isValidMobileNumber(std::string mobileNumber){
     std::regex pattern("^01[0-2][0-9]{8}$");
     return std::regex_match(mobileNumber, pattern);
 }
+
+bool Validator::isValidMoney(std::string money){
+    std::regex pattern("^[0-9]{1,5}$");
+    return std::regex_match(money, pattern);
+}

@@ -17,6 +17,7 @@ class Validator {
     bool isPasswordMatched(std::string password1, std::string password2);
     bool isValidID(std::string ID);
     bool isValidMobileNumber(std::string mobileNumber);
+    bool isValidMoney(std::string money);
 
 };
 

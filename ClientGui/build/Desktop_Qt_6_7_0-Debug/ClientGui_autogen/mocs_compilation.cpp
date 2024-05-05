@@ -2,3 +2,4 @@
 #include "EWIEGA46WW/moc_mainwindow.cpp"
 #include "EWIEGA46WW/moc_sign_up.cpp"
 #include "EWIEGA46WW/moc_signin.cpp"
+#include "EWIEGA46WW/moc_wallet.cpp"

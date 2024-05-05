@@ -4,6 +4,7 @@
 #include "./sign_up.h"
 
 
+
 MainWindow::MainWindow(QWidget *parent)
   : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
@@ -16,7 +17,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->icon->setPixmap(pix.scaled(w, h, Qt::KeepAspectRatio));
 }
 
-MainWindow::~MainWindow() { delete ui; }
+MainWindow::~MainWindow() {
+
+    delete ui; }
 
 
 void MainWindow::on_CreateNewWallet_clicked()
@@ -24,6 +27,8 @@ void MainWindow::on_CreateNewWallet_clicked()
     Sign_Up *signUpWindow = new Sign_Up();
 
     signUpWindow->show();
+
+    signUpWindow->setAttribute(Qt::WA_DeleteOnClose, true);
 
     close();
 
@@ -35,6 +40,8 @@ void MainWindow::on_LoginToWallet_clicked()
     SignIn *signInWindow = new SignIn();
 
     signInWindow->show();
+
+    signInWindow->setAttribute(Qt::WA_DeleteOnClose, true);
 
     close();
 }

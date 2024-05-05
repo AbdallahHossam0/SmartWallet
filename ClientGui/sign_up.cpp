@@ -1,6 +1,7 @@
 #include "sign_up.h"
 #include "ui_sign_up.h"
 #include "mainwindow.h"
+#include "wallet.h"
 #include "validator.h"
 #include <QTimer>
 
@@ -21,8 +22,8 @@ void Sign_Up::on_BackToMainWindow_clicked()
 {
     MainWindow *mainWindow = new MainWindow();
     mainWindow->show();
+    mainWindow->setAttribute(Qt::WA_DeleteOnClose, true);
     close();
-    deleteLater();
 }
 
 
@@ -77,6 +78,9 @@ void Sign_Up::on_SignUpButton_clicked()
     ui->ErrorLabel->setText("Your Wallet Created\n Your wallet will be lanched automatically");
 
     QTimer::singleShot(1500, this, [this](){
+        Wallet *walletWindow = new Wallet();
+        walletWindow->show();
+        walletWindow->setAttribute(Qt::WA_DeleteOnClose, true);
         this->close();
     });
 
