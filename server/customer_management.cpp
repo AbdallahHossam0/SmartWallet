@@ -128,6 +128,10 @@ std::string CustomerManagement::handleRequests(std::string request) {
         s = customers.at(tokens[1]).transfer(stoi(tokens[3]),
                                              customers.at(tokens[2]));
 
+        if (s == Status::NoBalance) {
+            return "2";
+        }
+
         return std::string(
             "11/" + std::to_string(customers.at(tokens[1]).getBalance()) + '/' +
             customers.at(tokens[1]).getLogs());

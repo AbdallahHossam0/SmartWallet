@@ -18,7 +18,7 @@
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QTabWidget>
-#include <QtWidgets/QTextEdit>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -30,25 +30,30 @@ public:
     QWidget *BalanceTab;
     QLCDNumber *BalanceShow;
     QLabel *label_3;
-    QWidget *tab_2;
-    QLineEdit *WithdrawBox;
-    QPushButton *pushButton;
-    QLabel *label_4;
-    QWidget *tab;
-    QPushButton *pushButton_2;
-    QLineEdit *lineEdit_2;
-    QLabel *label_5;
-    QWidget *tab_4;
-    QPushButton *pushButton_3;
-    QLineEdit *lineEdit_3;
-    QLineEdit *lineEdit_4;
-    QLabel *label_6;
-    QWidget *tab_3;
-    QTextEdit *textEdit;
-    QListWidget *listWidget;
+    QWidget *Withdraw;
+    QLineEdit *MoneyToWithdraw;
+    QPushButton *WithdrawButton;
+    QLabel *WithdrawLabel;
+    QWidget *Deposite;
+    QPushButton *DepositButton;
+    QLineEdit *MoneyToDepositeBox;
+    QLabel *DepositLabel;
+    QWidget *Transfer;
+    QPushButton *TransferButton;
+    QLabel *TransferStatusLabel;
+    QWidget *widget;
+    QVBoxLayout *verticalLayout;
+    QLineEdit *ReceiverUsernameBox;
+    QLineEdit *MoneyToTransfer;
+    QWidget *Logs;
+    QListWidget *LogList;
+    QPushButton *UndoButton;
+    QPushButton *RedoButton;
+    QLabel *LogLabel;
     QLabel *label;
-    QLabel *icon;
-    QLabel *label_2;
+    QLabel *GreetingLabel;
+    QPushButton *RefreshButton;
+    QLabel *RefreshLabel;
 
     void setupUi(QDialog *Wallet)
     {
@@ -87,105 +92,120 @@ public:
         font.setPointSize(100);
         label_3->setFont(font);
         label_3->setAlignment(Qt::AlignCenter);
-        QIcon icon1(QIcon::fromTheme(QString::fromUtf8("accessories-text-editor")));
-        tabWidget->addTab(BalanceTab, icon1, QString());
-        tab_2 = new QWidget();
-        tab_2->setObjectName("tab_2");
-        WithdrawBox = new QLineEdit(tab_2);
-        WithdrawBox->setObjectName("WithdrawBox");
-        WithdrawBox->setGeometry(QRect(160, 50, 401, 51));
+        QIcon icon(QIcon::fromTheme(QString::fromUtf8("accessories-text-editor")));
+        tabWidget->addTab(BalanceTab, icon, QString());
+        Withdraw = new QWidget();
+        Withdraw->setObjectName("Withdraw");
+        MoneyToWithdraw = new QLineEdit(Withdraw);
+        MoneyToWithdraw->setObjectName("MoneyToWithdraw");
+        MoneyToWithdraw->setGeometry(QRect(160, 50, 401, 51));
         QFont font1;
         font1.setPointSize(20);
-        WithdrawBox->setFont(font1);
-        WithdrawBox->setAlignment(Qt::AlignCenter);
-        pushButton = new QPushButton(tab_2);
-        pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(260, 140, 181, 31));
-        label_4 = new QLabel(tab_2);
-        label_4->setObjectName("label_4");
-        label_4->setGeometry(QRect(160, 189, 401, 41));
-        label_4->setAlignment(Qt::AlignCenter);
-        QIcon icon2(QIcon::fromTheme(QString::fromUtf8("go-down")));
-        tabWidget->addTab(tab_2, icon2, QString());
-        tab = new QWidget();
-        tab->setObjectName("tab");
-        pushButton_2 = new QPushButton(tab);
-        pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(260, 140, 181, 31));
-        lineEdit_2 = new QLineEdit(tab);
-        lineEdit_2->setObjectName("lineEdit_2");
-        lineEdit_2->setGeometry(QRect(160, 50, 401, 51));
-        lineEdit_2->setFont(font1);
-        lineEdit_2->setAlignment(Qt::AlignCenter);
-        label_5 = new QLabel(tab);
-        label_5->setObjectName("label_5");
-        label_5->setGeometry(QRect(170, 186, 381, 41));
-        label_5->setAlignment(Qt::AlignCenter);
-        QIcon icon3(QIcon::fromTheme(QString::fromUtf8("go-up")));
-        tabWidget->addTab(tab, icon3, QString());
-        tab_4 = new QWidget();
-        tab_4->setObjectName("tab_4");
-        pushButton_3 = new QPushButton(tab_4);
-        pushButton_3->setObjectName("pushButton_3");
-        pushButton_3->setGeometry(QRect(270, 160, 181, 31));
-        lineEdit_3 = new QLineEdit(tab_4);
-        lineEdit_3->setObjectName("lineEdit_3");
-        lineEdit_3->setGeometry(QRect(170, 20, 401, 51));
+        MoneyToWithdraw->setFont(font1);
+        MoneyToWithdraw->setAlignment(Qt::AlignCenter);
+        WithdrawButton = new QPushButton(Withdraw);
+        WithdrawButton->setObjectName("WithdrawButton");
+        WithdrawButton->setGeometry(QRect(260, 140, 181, 31));
+        WithdrawLabel = new QLabel(Withdraw);
+        WithdrawLabel->setObjectName("WithdrawLabel");
+        WithdrawLabel->setGeometry(QRect(160, 189, 401, 41));
+        WithdrawLabel->setAlignment(Qt::AlignCenter);
+        QIcon icon1(QIcon::fromTheme(QString::fromUtf8("go-down")));
+        tabWidget->addTab(Withdraw, icon1, QString());
+        Deposite = new QWidget();
+        Deposite->setObjectName("Deposite");
+        DepositButton = new QPushButton(Deposite);
+        DepositButton->setObjectName("DepositButton");
+        DepositButton->setGeometry(QRect(260, 140, 181, 31));
+        MoneyToDepositeBox = new QLineEdit(Deposite);
+        MoneyToDepositeBox->setObjectName("MoneyToDepositeBox");
+        MoneyToDepositeBox->setGeometry(QRect(160, 50, 401, 51));
+        MoneyToDepositeBox->setFont(font1);
+        MoneyToDepositeBox->setAlignment(Qt::AlignCenter);
+        DepositLabel = new QLabel(Deposite);
+        DepositLabel->setObjectName("DepositLabel");
+        DepositLabel->setGeometry(QRect(170, 186, 381, 41));
+        DepositLabel->setAlignment(Qt::AlignCenter);
+        QIcon icon2(QIcon::fromTheme(QString::fromUtf8("go-up")));
+        tabWidget->addTab(Deposite, icon2, QString());
+        Transfer = new QWidget();
+        Transfer->setObjectName("Transfer");
+        TransferButton = new QPushButton(Transfer);
+        TransferButton->setObjectName("TransferButton");
+        TransferButton->setGeometry(QRect(270, 160, 181, 31));
+        TransferStatusLabel = new QLabel(Transfer);
+        TransferStatusLabel->setObjectName("TransferStatusLabel");
+        TransferStatusLabel->setGeometry(QRect(180, 200, 381, 41));
+        TransferStatusLabel->setAlignment(Qt::AlignCenter);
+        widget = new QWidget(Transfer);
+        widget->setObjectName("widget");
+        widget->setGeometry(QRect(170, 20, 391, 131));
+        verticalLayout = new QVBoxLayout(widget);
+        verticalLayout->setObjectName("verticalLayout");
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        ReceiverUsernameBox = new QLineEdit(widget);
+        ReceiverUsernameBox->setObjectName("ReceiverUsernameBox");
         QFont font2;
         font2.setPointSize(18);
-        lineEdit_3->setFont(font2);
-        lineEdit_3->setAlignment(Qt::AlignCenter);
-        lineEdit_4 = new QLineEdit(tab_4);
-        lineEdit_4->setObjectName("lineEdit_4");
-        lineEdit_4->setGeometry(QRect(170, 90, 401, 51));
-        lineEdit_4->setFont(font1);
-        lineEdit_4->setAlignment(Qt::AlignCenter);
-        label_6 = new QLabel(tab_4);
-        label_6->setObjectName("label_6");
-        label_6->setGeometry(QRect(180, 200, 381, 41));
-        label_6->setAlignment(Qt::AlignCenter);
-        QIcon icon4(QIcon::fromTheme(QString::fromUtf8("go-next")));
-        tabWidget->addTab(tab_4, icon4, QString());
-        tab_3 = new QWidget();
-        tab_3->setObjectName("tab_3");
-        textEdit = new QTextEdit(tab_3);
-        textEdit->setObjectName("textEdit");
-        textEdit->setGeometry(QRect(10, 10, 291, 231));
-        textEdit->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
-        textEdit->setReadOnly(true);
-        listWidget = new QListWidget(tab_3);
-        new QListWidgetItem(listWidget);
-        new QListWidgetItem(listWidget);
-        listWidget->setObjectName("listWidget");
-        listWidget->setGeometry(QRect(450, 60, 256, 192));
-        listWidget->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
-        listWidget->setProperty("isWrapping", QVariant(false));
-        listWidget->setWordWrap(false);
-        listWidget->setSelectionRectVisible(true);
-        QIcon icon5(QIcon::fromTheme(QString::fromUtf8("text-x-script")));
-        tabWidget->addTab(tab_3, icon5, QString());
+        ReceiverUsernameBox->setFont(font2);
+        ReceiverUsernameBox->setAlignment(Qt::AlignCenter);
+
+        verticalLayout->addWidget(ReceiverUsernameBox);
+
+        MoneyToTransfer = new QLineEdit(widget);
+        MoneyToTransfer->setObjectName("MoneyToTransfer");
+        MoneyToTransfer->setFont(font1);
+        MoneyToTransfer->setAlignment(Qt::AlignCenter);
+
+        verticalLayout->addWidget(MoneyToTransfer);
+
+        QIcon icon3(QIcon::fromTheme(QString::fromUtf8("go-next")));
+        tabWidget->addTab(Transfer, icon3, QString());
+        Logs = new QWidget();
+        Logs->setObjectName("Logs");
+        LogList = new QListWidget(Logs);
+        LogList->setObjectName("LogList");
+        LogList->setGeometry(QRect(10, 10, 721, 171));
+        LogList->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
+        LogList->setProperty("isWrapping", QVariant(false));
+        LogList->setWordWrap(false);
+        LogList->setSelectionRectVisible(true);
+        UndoButton = new QPushButton(Logs);
+        UndoButton->setObjectName("UndoButton");
+        UndoButton->setGeometry(QRect(440, 220, 131, 31));
+        RedoButton = new QPushButton(Logs);
+        RedoButton->setObjectName("RedoButton");
+        RedoButton->setGeometry(QRect(140, 220, 131, 31));
+        LogLabel = new QLabel(Logs);
+        LogLabel->setObjectName("LogLabel");
+        LogLabel->setGeometry(QRect(40, 190, 671, 17));
+        LogLabel->setAlignment(Qt::AlignCenter);
+        QIcon icon4(QIcon::fromTheme(QString::fromUtf8("text-x-script")));
+        tabWidget->addTab(Logs, icon4, QString());
         label = new QLabel(Wallet);
         label->setObjectName("label");
         label->setGeometry(QRect(550, 0, 181, 91));
         label->setFont(font2);
         label->setAlignment(Qt::AlignCenter);
         label->setWordWrap(true);
-        icon = new QLabel(Wallet);
-        icon->setObjectName("icon");
-        icon->setGeometry(QRect(510, 20, 41, 51));
-        icon->setPixmap(QPixmap(QString::fromUtf8("wallet.png")));
-        label_2 = new QLabel(Wallet);
-        label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(20, 20, 331, 61));
+        GreetingLabel = new QLabel(Wallet);
+        GreetingLabel->setObjectName("GreetingLabel");
+        GreetingLabel->setGeometry(QRect(10, 0, 331, 61));
         QFont font3;
         font3.setPointSize(16);
-        label_2->setFont(font3);
-        label_2->setAlignment(Qt::AlignCenter);
-        label_2->setWordWrap(true);
+        GreetingLabel->setFont(font3);
+        GreetingLabel->setAlignment(Qt::AlignCenter);
+        GreetingLabel->setWordWrap(true);
+        RefreshButton = new QPushButton(Wallet);
+        RefreshButton->setObjectName("RefreshButton");
+        RefreshButton->setGeometry(QRect(100, 80, 89, 25));
+        RefreshLabel = new QLabel(Wallet);
+        RefreshLabel->setObjectName("RefreshLabel");
+        RefreshLabel->setGeometry(QRect(200, 80, 81, 21));
 
         retranslateUi(Wallet);
 
-        tabWidget->setCurrentIndex(4);
+        tabWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(Wallet);
@@ -196,40 +216,27 @@ public:
         Wallet->setWindowTitle(QCoreApplication::translate("Wallet", "Dialog", nullptr));
         label_3->setText(QCoreApplication::translate("Wallet", "$", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(BalanceTab), QCoreApplication::translate("Wallet", "Balance ", nullptr));
-        WithdrawBox->setPlaceholderText(QCoreApplication::translate("Wallet", "Enter Amount to withdraw", nullptr));
-        pushButton->setText(QCoreApplication::translate("Wallet", "Withdraw", nullptr));
-        label_4->setText(QString());
-        tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("Wallet", "Withdraw", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("Wallet", "Deposit", nullptr));
-        lineEdit_2->setPlaceholderText(QCoreApplication::translate("Wallet", "Enter amount to Deposit", nullptr));
-        label_5->setText(QString());
-        tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("Wallet", "Deposit", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("Wallet", "Transfer", nullptr));
-        lineEdit_3->setPlaceholderText(QCoreApplication::translate("Wallet", "Enter Username", nullptr));
-        lineEdit_4->setPlaceholderText(QCoreApplication::translate("Wallet", "Enter the Amount of Money", nullptr));
-        label_6->setText(QString());
-        tabWidget->setTabText(tabWidget->indexOf(tab_4), QCoreApplication::translate("Wallet", "Transfer", nullptr));
-        textEdit->setHtml(QCoreApplication::translate("Wallet", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
-
-        const bool __sortingEnabled = listWidget->isSortingEnabled();
-        listWidget->setSortingEnabled(false);
-        QListWidgetItem *___qlistwidgetitem = listWidget->item(0);
-        ___qlistwidgetitem->setText(QCoreApplication::translate("Wallet", "Abdallah", nullptr));
-        QListWidgetItem *___qlistwidgetitem1 = listWidget->item(1);
-        ___qlistwidgetitem1->setText(QCoreApplication::translate("Wallet", "cdlkncldmclkdmlkcnlkdnclkdnlckndlknclkdncldnclndjncldkncjdncd", nullptr));
-        listWidget->setSortingEnabled(__sortingEnabled);
-
-        tabWidget->setTabText(tabWidget->indexOf(tab_3), QCoreApplication::translate("Wallet", "Account Logs", nullptr));
+        MoneyToWithdraw->setPlaceholderText(QCoreApplication::translate("Wallet", "Enter Amount to withdraw", nullptr));
+        WithdrawButton->setText(QCoreApplication::translate("Wallet", "Withdraw", nullptr));
+        WithdrawLabel->setText(QString());
+        tabWidget->setTabText(tabWidget->indexOf(Withdraw), QCoreApplication::translate("Wallet", "Withdraw", nullptr));
+        DepositButton->setText(QCoreApplication::translate("Wallet", "Deposit", nullptr));
+        MoneyToDepositeBox->setPlaceholderText(QCoreApplication::translate("Wallet", "Enter Money to Deposit", nullptr));
+        DepositLabel->setText(QString());
+        tabWidget->setTabText(tabWidget->indexOf(Deposite), QCoreApplication::translate("Wallet", "Deposit", nullptr));
+        TransferButton->setText(QCoreApplication::translate("Wallet", "Transfer", nullptr));
+        TransferStatusLabel->setText(QString());
+        ReceiverUsernameBox->setPlaceholderText(QCoreApplication::translate("Wallet", "Enter Username", nullptr));
+        MoneyToTransfer->setPlaceholderText(QCoreApplication::translate("Wallet", "Enter the Amount of Money", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(Transfer), QCoreApplication::translate("Wallet", "Transfer", nullptr));
+        UndoButton->setText(QCoreApplication::translate("Wallet", "Undo", nullptr));
+        RedoButton->setText(QCoreApplication::translate("Wallet", "Redo", nullptr));
+        LogLabel->setText(QString());
+        tabWidget->setTabText(tabWidget->indexOf(Logs), QCoreApplication::translate("Wallet", "Account Logs", nullptr));
         label->setText(QCoreApplication::translate("Wallet", "Welcome to Smart Wallet", nullptr));
-        icon->setText(QString());
-        label_2->setText(QCoreApplication::translate("Wallet", "Hello, Mr. Abdallah Hossam", nullptr));
+        GreetingLabel->setText(QCoreApplication::translate("Wallet", "Hello, Mr. Abdallah Hossam", nullptr));
+        RefreshButton->setText(QCoreApplication::translate("Wallet", "Refresh", nullptr));
+        RefreshLabel->setText(QString());
     } // retranslateUi
 
 };

@@ -21,6 +21,11 @@ class CustomerManagement {
 
     std::vector<std::string> splitString(const std::string &s, char delimiter);
 
+    CustomerManagement() {}
+
+    CustomerManagement(const CustomerManagement &) = delete;
+    CustomerManagement &operator=(const CustomerManagement &) = delete;
+
     bool createNewCustomer(std::string name, std::string username,
                            std::string password, Gender gender);
     bool signIn(std::string username, std::string password);
@@ -30,4 +35,8 @@ class CustomerManagement {
 
   public:
     std::string handleRequests(std::string request);
+    static CustomerManagement &getCustomerManager() {
+        static CustomerManagement customerManager;
+        return customerManager;
+    }
 };
