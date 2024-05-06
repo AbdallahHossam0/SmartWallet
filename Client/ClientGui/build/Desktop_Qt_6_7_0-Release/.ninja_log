@@ -1,0 +1,15 @@
+# ninja log v5
+0	555	1715003539676275081	ClientGui_autogen/timestamp	9b2176eaf1c2325e
+0	555	1715003539676275081	ClientGui_autogen/mocs_compilation.cpp	9b2176eaf1c2325e
+0	555	1715003539676275081	/home/abdallah/Siemens/Gui/Client/ClientGui/build/Desktop_Qt_6_7_0-Release/ClientGui_autogen/timestamp	9b2176eaf1c2325e
+0	555	1715003539676275081	/home/abdallah/Siemens/Gui/Client/ClientGui/build/Desktop_Qt_6_7_0-Release/ClientGui_autogen/mocs_compilation.cpp	9b2176eaf1c2325e
+557	1036	1715003540160275091	CMakeFiles/ClientGui.dir/stringhasher.cpp.o	b14833d02147473
+557	1883	1715003541000275107	CMakeFiles/ClientGui.dir/client.cpp.o	307ec37edad2e471
+556	2864	1715003541988275127	CMakeFiles/ClientGui.dir/ClientGui_autogen/mocs_compilation.cpp.o	c28004b78469082a
+555	3134	1715003542260275132	CMakeFiles/ClientGui.dir/main.cpp.o	66f8fc9e370f5529
+556	3204	1715003542328275134	CMakeFiles/ClientGui.dir/signin.cpp.o	bc5187bc38b614ff
+556	3455	1715003542580275139	CMakeFiles/ClientGui.dir/mainwindow.cpp.o	252f4714bef2c4f9
+557	4255	1715003543380275154	CMakeFiles/ClientGui.dir/wallet.cpp.o	920dd8dbe53fb73b
+556	4311	1715003543436275156	CMakeFiles/ClientGui.dir/sign_up.cpp.o	60c5468470553c48
+557	4584	1715003543708275161	CMakeFiles/ClientGui.dir/validator.cpp.o	c04acb49bbabd51b
+4584	4939	1715003544060275168	ClientGui	827f6e509fa68dda

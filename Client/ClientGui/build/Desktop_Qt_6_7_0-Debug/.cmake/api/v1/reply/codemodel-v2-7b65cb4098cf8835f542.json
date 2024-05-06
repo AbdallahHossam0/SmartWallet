@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-8cf6b517810e9197bb95.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ClientGui",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ClientGui::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ClientGui-Debug-247dcb5d82ecc7b912cb.json",
+					"name" : "ClientGui",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ClientGui_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ClientGui_autogen-Debug-3187ba1237f135587664.json",
+					"name" : "ClientGui_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ClientGui_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ClientGui_autogen_timestamp_deps-Debug-2fd49fd9a13a514465eb.json",
+					"name" : "ClientGui_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/abdallah/Siemens/Gui/Client/ClientGui/build/Desktop_Qt_6_7_0-Debug",
+		"source" : "/home/abdallah/Siemens/Gui/Client/ClientGui"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

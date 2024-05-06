@@ -1,0 +1,12 @@
+# ninja log v5
+0	215	1714998091108167457	ServerGui_autogen/timestamp	7a5ca3f9086398a3
+0	215	1714998091108167457	ServerGui_autogen/mocs_compilation.cpp	7a5ca3f9086398a3
+0	215	1714998091108167457	/home/abdallah/Siemens/Gui/Server/ServerGui/build/Desktop_Qt_6_7_0-Release/ServerGui_autogen/timestamp	7a5ca3f9086398a3
+0	215	1714998091108167457	/home/abdallah/Siemens/Gui/Server/ServerGui/build/Desktop_Qt_6_7_0-Release/ServerGui_autogen/mocs_compilation.cpp	7a5ca3f9086398a3
+216	774	1714998091668167469	CMakeFiles/ServerGui.dir/server.cpp.o	ea4ec8b0318faa36
+216	846	1714998091740167470	CMakeFiles/ServerGui.dir/customer.cpp.o	d4757baa0c8b94ac
+216	1147	1714998092040167476	CMakeFiles/ServerGui.dir/customer_management.cpp.o	23147c6f0c3c495e
+215	1456	1714998092352167482	CMakeFiles/ServerGui.dir/ServerGui_autogen/mocs_compilation.cpp.o	8904fa8a323f83b4
+215	1611	1714998092508167485	CMakeFiles/ServerGui.dir/main.cpp.o	36bcf0b3b1384540
+215	2133	1714998093028167495	CMakeFiles/ServerGui.dir/mainwindow.cpp.o	f2418811498449a9
+2133	2401	1714998093292167501	ServerGui	1ced1a1a3373ba52

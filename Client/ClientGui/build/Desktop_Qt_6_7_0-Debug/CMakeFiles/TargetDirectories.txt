@@ -1,0 +1,9 @@
+/home/abdallah/Siemens/Gui/Client/ClientGui/build/Desktop_Qt_6_7_0-Debug/CMakeFiles/ClientGui.dir
+/home/abdallah/Siemens/Gui/Client/ClientGui/build/Desktop_Qt_6_7_0-Debug/CMakeFiles/edit_cache.dir
+/home/abdallah/Siemens/Gui/Client/ClientGui/build/Desktop_Qt_6_7_0-Debug/CMakeFiles/rebuild_cache.dir
+/home/abdallah/Siemens/Gui/Client/ClientGui/build/Desktop_Qt_6_7_0-Debug/CMakeFiles/list_install_components.dir
+/home/abdallah/Siemens/Gui/Client/ClientGui/build/Desktop_Qt_6_7_0-Debug/CMakeFiles/install.dir
+/home/abdallah/Siemens/Gui/Client/ClientGui/build/Desktop_Qt_6_7_0-Debug/CMakeFiles/install/local.dir
+/home/abdallah/Siemens/Gui/Client/ClientGui/build/Desktop_Qt_6_7_0-Debug/CMakeFiles/install/strip.dir
+/home/abdallah/Siemens/Gui/Client/ClientGui/build/Desktop_Qt_6_7_0-Debug/CMakeFiles/ClientGui_autogen_timestamp_deps.dir
+/home/abdallah/Siemens/Gui/Client/ClientGui/build/Desktop_Qt_6_7_0-Debug/CMakeFiles/ClientGui_autogen.dir

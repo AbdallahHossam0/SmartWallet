@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-0a5806bc4a3be6322add.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ServerGui",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ServerGui::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ServerGui-Debug-d8191cd772de5719dee2.json",
+					"name" : "ServerGui",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ServerGui_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ServerGui_autogen-Debug-b76cdad73792422725f5.json",
+					"name" : "ServerGui_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ServerGui_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ServerGui_autogen_timestamp_deps-Debug-cc8553ce8edbb4f00818.json",
+					"name" : "ServerGui_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/abdallah/Siemens/Gui/Server/ServerGui/build/Desktop_Qt_6_7_0-Debug",
+		"source" : "/home/abdallah/Siemens/Gui/Server/ServerGui"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
